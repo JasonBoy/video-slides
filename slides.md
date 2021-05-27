@@ -155,42 +155,17 @@ a {
 
 ---
 
-# MediaSource Extension API
+# 视频格式，编码
 
-|     |     |
+- 容器格式（文件扩展名）：https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers
+- 编码器： https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs 
+
+<!-- |     |     |
 | --- | --- |
 | <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
 | <kbd>left</kbd> | previous animation or slide |
 | <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
+| <kbd>down</kbd> | next slide | -->
 
 
 ---

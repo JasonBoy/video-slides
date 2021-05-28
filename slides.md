@@ -182,13 +182,20 @@ class: 'px-20 gradient-h1'
 
 # 常用流媒体协议
 
-| 协议       | 应用领域    | 优缺点  |
-| ---       | ---        | ---    |
-| HTTP-FLV  | 直播        | 延迟低 |
-| HLS       | 直播/点播(自适应比特流) | Apple搞的协议，兼容性好，延迟高（通过`Low Latency HLS`解决） |
-| MPEG-DASH | 直播/点播(自适应比特流) | 国际标准，对标苹果的HLS |
-| RTMP      | 目前主要推流端 | 带宽消耗低，延迟低，播放需要Flash |
+| 协议       | 应用领域    | 支持音视频编码      | 优缺点  |
+| ---       | ---        |  ---     | ---    |
+| HTTP-FLV  | 直播        | H.264 + AAC / MP3等      | 延迟低 |
+| HLS       | 直播/点播(自适应比特流) | H.265, H.264 + AAC, MP3, Apple Lossless, FLAC...      | Apple搞的协议，兼容性好，延迟高（通过`Low Latency HLS`解决） |
+| MPEG-DASH | 直播/点播(自适应比特流) | 不限编码      | 国际标准，对标苹果的HLS |
+| RTMP      | 目前主要推流端 | H.264, VP8 等     | 带宽消耗低，延迟低，播放需要Flash |
 
+<img border="rounded" src="assets/protocal-share.png" style="height: 200px; margin: 0 auto;"/>
+
+<style>
+  table tr td:first-child {
+    white-space: nowrap;
+  }
+</style>
 
 ---
 class: 'gradient-h1'
@@ -230,7 +237,7 @@ class: 'gradient-h1'
 
 flv.js 的工作原理是将 FLV 文件流转换为 ISO BMFF（Fragmented MP4）片段，然后通过 Media Source Extensions API 将 mp4 段喂给 HTML5 video 元素
 
-<img src="assets/flvjs.png" style="height: 350px;"/>
+<img src="assets/flvjs.png" style="height: 350px; margin: 0 auto;"/>
 
 ---
 class: 'gradient-h1'

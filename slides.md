@@ -205,7 +205,7 @@ class: 'gradient-h1'
 
 # 各协议延迟
 
-<img src="assets/latency-with-protocols.png" style="width: 90%; height: auto;"/>
+<img src="assets/latency-with-protocols.png" style="height: 430px; margin: 0 auto;"/>
 
 ---
 class: 'gradient-h1'

@@ -8,7 +8,8 @@
   "dependencies": {
     "@slidev/cli": "^0.11.2",
     "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/theme-seriph": "*",
+    "playwright-chromium": "^1.11.1"
   },
   "name": "video-slides"
 }

@@ -1,7 +1,7 @@
 ---
 # try also 'default' to start simple
 theme: seriph
-download: true
+download: false
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://source.unsplash.com/collection/94734566/1920x1080
@@ -223,11 +223,19 @@ class: 'gradient-h1'
 
 <div grid="~ cols-2 gap-2" m="-t-2">
 
-<img border="rounded" src="assets/playflow-plain.png"/>
+  <img border="rounded" src="assets/playflow-plain.png"/>
 
-<img border="rounded" src="assets/playflow-detail.png" style="height: 450px;"/>
+  <img border="rounded" src="assets/playflow-detail.png" style="height: 450px;"/>
 
 </div>
+
+---
+class: 'gradient-h1'
+---
+
+# 直播链路
+
+<img src="assets/live-streaming.png" style="height: 430px; margin: 0 auto;"/>
 
 ---
 class: 'gradient-h1'

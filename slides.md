@@ -18,7 +18,7 @@ info: |
 
 # &lt;video/&gt; 标签
 
-## 从入门到入坑(maybe 放弃)
+### 从入门到入坑(maybe 放弃)
 
 <!-- <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 p-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -45,15 +45,15 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 - 🎨 **主流视频网站video标签地址** - Blob URL
 
-- 🧑‍💻 **MSE API** - MediaSource Extension API
+- 🧑‍💻 **视频格式、编码**
 
 - 🤹 **流媒体协议** - 主要的流媒体协议有哪些
 
 - 🎥 **点播/直播** - bilibili及主流视频网站用的哪些点播/直播协议
 
-- 📤 **手动下载个B站视频** - 根据B站视频的播放方式下载切片合成一个完整的MP4视频
+- 📤 **手动下载个B站视频** 
 
-- 🛠 **Bonus** - Mac native 下载视频app
+<!-- - 🛠 **Bonus** - Mac native 下载视频app -->
 
 <!-- <br>
 <br>
@@ -78,22 +78,25 @@ h1 {
 </style>
 
 ---
+class: 'gradient-h1'
+---
 
 # video标签基本用法
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+<p>最直接用法</p> 
 
 ```html
 <video src="./xxx.mp4" autoplay=true playsinline controls="controls"></video>
 ```
 
 
-<p style="color: gray">兼容不同格式</p> 
+<p>兼容不同格式</p> 
 
 ```html
 <video autoplay=true playsinline controls="controls">
    <source src="https://www.bilibili.com/xx-demo-720p.webm" type="video/webm">
    <source src="https://www.bilibili.com/xx-demo-720p.mp4" type="video/mp4">   
+   浏览器不支持video
 </video>
 ```
 
@@ -117,7 +120,8 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 --- -->
-
+---
+class: 'gradient-h1'
 ---
 
 # 主流视频网站video标签地址
@@ -154,12 +158,14 @@ a {
 </style>
 
 ---
+class: 'gradient-h1'
+---
 
 # 视频格式，编码
 
-- 容器格式（文件扩展名）：https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers
-- 编码器： https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs 
+MDN： https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs 
 
+<img src="assets/codecs.png" style="height: 400px; margin: 0 auto;"/>
 <!-- |     |     |
 | --- | --- |
 | <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
@@ -169,7 +175,7 @@ a {
 
 
 ---
-class: px-20
+class: 'px-20 gradient-h1'
 ---
 
 
@@ -184,19 +190,25 @@ class: px-20
 
 
 ---
+class: 'gradient-h1'
+---
+
+# 自适应比特流
+
+点播主流基本就是HLS、MPEG-DASH的自适应比特流
+
+<img src="assets/abs-demo.png" style="width: 100%; height: auto;"/>
+
+---
+class: 'gradient-h1'
+---
 
 # 各协议延迟
 
 <img src="assets/latency-with-protocols.png" style="width: 90%; height: auto;"/>
 
 ---
-
-# FLV(FLASH Video) + flv.js
-
-flv.js 的工作原理是将 FLV 文件流转换为 ISO BMFF（Fragmented MP4）片段，然后通过 Media Source Extensions API 将 mp4 段喂给 HTML5 video 元素
-
-<img src="assets/flvjs.png" style="height: 350px;"/>
-
+class: 'gradient-h1'
 ---
 
 # 流媒体播放总体流程
@@ -210,155 +222,87 @@ flv.js 的工作原理是将 FLV 文件流转换为 ISO BMFF（Fragmented MP4）
 </div>
 
 ---
-
-# 自适应比特流的点播
-
-点播主流基本就是HLS、MPEG-DASH的自适应比特流
-
-<img src="assets/abs-demo.png" style="width: 100%; height: auto;"/>
-
+class: 'gradient-h1'
 ---
 
-# HLS m3u8 文件
+# FLV(FLASH Video) + flv.js
+
+flv.js 的工作原理是将 FLV 文件流转换为 ISO BMFF（Fragmented MP4）片段，然后通过 Media Source Extensions API 将 mp4 段喂给 HTML5 video 元素
+
+<img src="assets/flvjs.png" style="height: 350px;"/>
+
+---
+class: 'gradient-h1'
+---
+
+# HLS(HTTP Live Streaming)
 
 HLS 基于 .m3u8 文件查找下面的各个切片文件, [m3u8 demo](https://cdn.jwplayer.com/manifests/l3Hde9mU.m3u8)
 
 <img src="assets/m3u8-playlist.png" style="height: 400px; margin: 0 auto;"/>
 
 ---
-
-
-
-# animation
-
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div 
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
+class: 'gradient-h1'
 ---
 
-# 手动下载个B站视频
+# MPEG-DASH(Dynamic Adaptive Streaming Over HTTP)
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+MPEG-DASH 基于 .mpd manifest 文件(xml文件)查找下面的各个切片文件, [mpd demo](https://cdn.jwplayer.com/manifests/l3Hde9mU.mpd)
 
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
+<img src="assets/dash-flow.png" style="height: 400px; margin: 0 auto;"/>
 
 ---
+class: 'gradient-h1'
+---
 
-# Bonus
+# 生成符合HLS, MPEG-DASH的工具, 前端播放器
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+| 协议       | 命令行工具    | 支持的播放器/JS库  |
+| ---       | ---        | ---    |
+| HTTP-FLV  | FFmpeg        | flv.js |
+| HLS       | Apple HTTP Live Streaming tools;<br/> FFmpeg;<br/> Shaka Packager by Google;<br/>mp4box by GPAC;<br/> Bento4  | hls.js, video.js, shaka-player |
+| MPEG-DASH | FFmpeg;<br/> Shaka Packager by Google;<br/>mp4box by GPAC;<br/> Bento4 | dash.js, video.js, shaka-player |
 
-<div class="grid grid-cols-2 gap-4 pt-4 -mb-6">
+---
+class: 'gradient-h1'
+---
 
-```mermaid {scale: 0.9}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
+# 手动下载个B站视频, 播放器看直播
+
+bilibili点播用dash(.m4s --> MPEG-DASH Video Segment); 直播主要flv, hls
+
+<img src="assets/m4s-req.png" style="height: 400px; margin: 0 auto;"/>
+
+---
+class: 'gradient-h1'
+---
+
+# Bonus - 视频下载工具
+
+
+<div grid="~ cols-2 gap-2" m="-t-2">
+
+```yaml
+---
+Mac App: Downie 4, 支持1000+网站
+---
 ```
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
+```yaml
+---
+开源: youtube-dl - https://github.com/ytdl-org/youtube-dl
+---
 ```
+
+<img border="rounded" src="assets/downie4.png" style="height: 350px; margin: 0 auto;"/>
+
+<img border="rounded" src="assets/ytdl-gui.png" style="height: 350px; margin: 0 auto;"/>
 
 </div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
-
-[Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+# 🙌 Thank You 🙌

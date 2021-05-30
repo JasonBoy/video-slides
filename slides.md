@@ -42,7 +42,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 <!-- Slidev is a slides maker and presenter designed for developers, consist of the following features -->
 
-- 📝 **video标签基本用法** - 直接MP4链接
+- 📝 **video标签用法/用途** - 直接MP4链接
 
 - 🎨 **主流视频网站video标签地址** - Blob URL
 
@@ -82,15 +82,17 @@ h1 {
 class: 'gradient-h1'
 ---
 
-# video标签基本用法
+# video标签用法/用途
 
+<v-click>
 <p>最直接用法</p> 
 
 ```html
 <video src="./xxx.mp4" autoplay=true playsinline controls="controls"></video>
 ```
+</v-click>
 
-
+<v-click>
 <p>兼容不同格式</p> 
 
 ```html
@@ -100,27 +102,17 @@ class: 'gradient-h1'
    浏览器不支持video
 </video>
 ```
+</v-click>
 
-<!-- ### Keyboard Shortcuts
+<v-click>
+<p>更多用途</p>
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+- 截图 `canvas.getContext("2d").drawImage(video)`
+- 精确提取视频帧 `videoEle.requestVideoFrameCallback(() => {})`
+- 视频编辑器 (`ffmpeg.wasm`), 浏览器原生 `WebCodecs`
 
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p> -->
+</v-click>
 
-<!-- ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
---- -->
 ---
 class: 'gradient-h1'
 ---

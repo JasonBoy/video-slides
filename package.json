@@ -9,6 +9,7 @@
     "@slidev/cli": "^0.11.2",
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*",
+    "party-js": "^2.0.1",
     "playwright-chromium": "^1.11.1"
   },
   "name": "video-slides"

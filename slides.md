@@ -181,10 +181,7 @@ class: 'px-20 gradient-h1'
 | MPEG-DASH | 直播/点播(自适应比特流) | 不限编码      | 国际标准，对标苹果的HLS |
 | RTMP      | 目前主要推流端 | H.264, VP8 等     | 带宽消耗低，延迟低，播放需要Flash |
 
-
-<v-click>
-  <img border="rounded" src="assets/protocal-share.png" style="height: 200px; margin: 0 auto;"/>
-</v-click>
+<img v-click border="rounded" src="assets/protocal-share.png" style="height: 200px; margin: 0 auto;"/>
 
 <style>
   table tr td:first-child {
@@ -352,4 +349,5 @@ layout: center
 class: text-center
 ---
 
-# 🙌 Thank You 🙌
+# <Party v-if="$slidev.nav.currentPage === 19">🎉 Happy Children's Day 🥳</Party>
+

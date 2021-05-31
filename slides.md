@@ -17,7 +17,7 @@ info: |
   Learn more at [Sli.dev](https://sli.dev)
 ---
 
-# &lt;video/&gt; 标签
+# &lt;video/&gt;
 
 ### 从入门到入坑(maybe 放弃)
 
@@ -136,7 +136,7 @@ B站/爱优腾，YouTube/Netflix等 基本都是用的 [Blob URL](https://develo
 // blob:https://www.youtube.com/250d7dd2-a387-4024-9325-ed4842c5c3d0
 const objectURL = URL.createObjectURL(object)
 ```
-`object`可以为： `File`, `Blob`, or [MediaSource](https://developer.mozilla.org/en-US/docs/Web/API/MediaSource)  
+`object`可以为： `File`, `Blob`, or [MediaSource](https://developer.mozilla.org/en-US/docs/Web/API/MediaSource)([IOS不支持](https://developer.mozilla.org/en-US/docs/Web/API/MediaSource#browser_compatibility))  
 对于流媒体播放来说这里通过`MediaSource`(MediaSource Extension API)来创建Object URL
 
 <!-- <img src="assets/yt-video-url.png" style="width: auto;height: 250px;" height="100"/> -->
@@ -181,7 +181,10 @@ class: 'px-20 gradient-h1'
 | MPEG-DASH | 直播/点播(自适应比特流) | 不限编码      | 国际标准，对标苹果的HLS |
 | RTMP      | 目前主要推流端 | H.264, VP8 等     | 带宽消耗低，延迟低，播放需要Flash |
 
-<img border="rounded" src="assets/protocal-share.png" style="height: 200px; margin: 0 auto;"/>
+
+<v-click>
+  <img border="rounded" src="assets/protocal-share.png" style="height: 200px; margin: 0 auto;"/>
+</v-click>
 
 <style>
   table tr td:first-child {
@@ -215,9 +218,9 @@ class: 'gradient-h1'
 
 <div grid="~ cols-2 gap-2" m="-t-2">
 
-  <img border="rounded" src="assets/playflow-plain.png"/>
+  <img v-click border="rounded" src="assets/playflow-plain.png"/>
 
-  <img border="rounded" src="assets/playflow-detail.png" style="height: 450px;"/>
+  <img v-click border="rounded" src="assets/playflow-detail.png" style="height: 450px;"/>
 
 </div>
 
@@ -275,6 +278,32 @@ class: 'gradient-h1'
 class: 'gradient-h1'
 ---
 
+# iOS的情况
+
+<div grid="~ cols-2 gap-2" m="-t-2">
+
+  ```yaml
+  ---
+  bilibili ios h5
+  ---
+  ```
+
+  ```yaml
+  ---
+  爱奇艺 ios h5
+  ---
+  ```
+
+  <img border="rounded" src="assets/bili-ios-player.png" style="width: 100%;"/>
+
+  <img border="rounded" src="assets/iqiyi.png" style="width: 100%;"/>
+
+</div>
+
+---
+class: 'gradient-h1'
+---
+
 # 手动下载个B站视频, 播放器看直播
 
 bilibili点播用dash(.m4s --> MPEG-DASH Video Segment); 直播主要flv, hls
@@ -307,6 +336,16 @@ Mac App: Downie 4, 支持1000+网站
 <img border="rounded" src="assets/ytdl-gui.png" style="height: 350px; margin: 0 auto;"/>
 
 </div>
+
+---
+class: 'gradient-h1'
+---
+
+# Bonus - [sli.dev](https://sli.dev/) - Presentation Slides for Developers
+
+一个为开发者打造的演示文档工具
+
+<img src="assets/slidev.png" style="height: 400px; margin: 0 auto;"/>
 
 ---
 layout: center

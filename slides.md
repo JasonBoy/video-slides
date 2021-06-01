@@ -172,7 +172,7 @@ MDN： https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
 
 油管1080P以上基本用的是VP9, AV1编码
 
-<img src="assets/yt-safari.png" style="height: 430px; margin: 0 auto;"/>
+<img src="assets/yt-safari.png" style="width: 100%; margin: 0 auto;"/>
 
 ---
 class: 'px-20 gradient-h1'

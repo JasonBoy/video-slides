@@ -166,6 +166,13 @@ MDN： https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
 | <kbd>up</kbd> | previous slide |
 | <kbd>down</kbd> | next slide | -->
 
+---
+
+# 编码导致Youtube在Safari中不能看4K
+
+油管1080P以上基本用的是VP9, AV1编码
+
+<img src="assets/yt-safari.png" style="height: 430px; margin: 0 auto;"/>
 
 ---
 class: 'px-20 gradient-h1'

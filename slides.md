@@ -167,6 +167,8 @@ MDN： https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
 | <kbd>down</kbd> | next slide | -->
 
 ---
+class: 'gradient-h1'
+---
 
 # 编码导致Youtube在Safari中不能看4K
 
@@ -177,7 +179,6 @@ MDN： https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
 ---
 class: 'px-20 gradient-h1'
 ---
-
 
 # 常用流媒体协议
 
@@ -356,5 +357,5 @@ layout: center
 class: text-center
 ---
 
-# <Party v-if="$slidev.nav.currentPage === 19">🎉 Happy Children's Day 🥳</Party>
+# <Party v-if="$slidev.nav.currentPage === 20">🎉 Happy Children's Day 🥳</Party>
 

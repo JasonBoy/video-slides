@@ -170,7 +170,7 @@ MDN： https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
 
 # 编码导致Youtube在Safari中不能看4K
 
-油管1080P以上基本用的是VP9, AV1编码
+油管1080P以上基本用的是VP9, AV1编码; iPhone拍的视频(h.265)在Chrome里放不了
 
 <img src="assets/yt-safari.png" style="width: 100%; margin: 0 auto;"/>
 

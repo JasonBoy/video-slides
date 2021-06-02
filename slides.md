@@ -19,7 +19,7 @@ info: |
 
 # &lt;video/&gt;
 
-### 从入门到入坑(maybe 放弃)
+### + 流媒体 从入门到入坑(maybe 放弃)
 
 <!-- <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 p-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -357,5 +357,5 @@ layout: center
 class: text-center
 ---
 
-# <Party v-if="$slidev.nav.currentPage === 20">🎉 Happy Children's Day 🥳</Party>
+# <Party v-if="$slidev.nav.currentPage === 20">🎉 Thank You 🥳</Party>
 

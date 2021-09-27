@@ -21,10 +21,27 @@ info: |
 
 ## Mac Dev Apps
 
-- Alfred
-- Webstorm/VSCode, Quokkajs plugin
-- Charles
-- Dash App
+- Alfred 
+  workflow(e.g 
+    npm, 
+    dash, 
+    time, 
+    qrcode, 
+    tabs, 
+    dark mode/night shift/do not disturb,
+    launch website/app), 
+  clipboard history
+- Webstorm/VSCode, 
+    Quokkajs plugin, 
+    shortkeys, 
+    multi columns selection
+    file structure
+    tips/tricks
+- Charles, 
+    https/socks proxy, 
+    .pac file自动代理, 
+    mobile app socks 抓包
+- Dash App, (integrated with alfred)
 - PixelSnap2
 
 ## Bonus Apps

@@ -32,12 +32,14 @@ info: |
     launch website/app), 
   clipboard history
 - Webstorm/VSCode, 
+    Scratch file (cmd + shift + n)
     Quokkajs plugin, 
     shortkeys, 
     multi columns selection
     file structure
     tips/tricks
 - Charles, 
+    替换switchy omega插件
     https/socks proxy, 
     .pac file自动代理, 
     mobile app socks 抓包

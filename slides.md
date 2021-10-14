@@ -147,6 +147,14 @@ class: 'gradient-h1'
 class: 'gradient-h1'
 ---
 
+# Charles 头条视频抓包
+
+<img src="assets/dev/charles-toutiao.png" style="height: 430px; margin: 0 auto;"/>  
+
+---
+class: 'gradient-h1'
+---
+
 # Charles 替代品
 
 [Proxyman](https://proxyman.io/), Mac原生app, 下面抓取视频Proxyman的截图

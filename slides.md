@@ -75,19 +75,27 @@ class: 'gradient-h1'
 
 # WebStorm/VSCode
 
-- Scratch file (`CMD + SHIFT + N`)，创建临时文件
-- Multi cursors，多光标输入、多列选择模式
-- File structure(`CMD + F12`), 比 `CMD + F`更快的查看文件的不同地方
+- File structure(`CMD + F12`), 比 `CMD + F`更快的查看文件变量，方法，html tab等
+- Multiple cursors, Column Selection Mode，多光标输入、多列选择模式
 - Local History, 本地历史
+- Scratch file (`CMD + SHIFT + N`)，创建临时文件
 - Quokkajs plugin, 快速编写代码，实时看效果
 - 其他一些好用的快捷键
   - 当前文件快速定位到文件目录里的对应位置(包括node_modules里的文件)(`CTRL + CMD + <-`)
   - Search Everywhere, `SHIFT + SHIFT`, 搜索配置/操作(`CMD + SHIFT + P/A`), etc...
   - Surround Width(`CMD + ALT + T`), 快速2遍加tag, 方法调用等
-  - 快速复制光标所在当前行(`CMD + D`)
   - postfix, `var1.logname` -> `console.log('var1: ', var1)`
   - live template, e.g: 
-    - `tc` -> try/catch block; `ushook` -> `const [dataList, setDataList] = useState([]);`
+    - `tc` -> try/catch block; 
+    - `ushook` -> `const [dataList, setDataList] = useState([]);`
+
+---
+class: 'gradient-h1'
+---
+
+# Multiple Cursors多光标 demo
+
+<img src="assets/dev/multiple-cursor-finish.png" style="width: 100%; height: auto;"/>  
 
 ---
 class: 'gradient-h1'
@@ -103,16 +111,16 @@ class: 'gradient-h1'
 
 # Charles
 
-- 可以替换浏览器Switchy Omega插件
-  - 通过charles的 Map Remote 工具
+- 可替换浏览器Switchy Omega插件
+  - 通过Charles的 Map Remote 工具
     - 真香的地方：
       - 配置一次到处用，多浏览器，局域网其他机器，虚拟机里windows都可以直接用
-      - 手机app里测孵化api更方便
+      - app里H5测孵化api更方便
     - 不香的地方：
       - 没有分组功能，配了一长串，有时不好找
-- https/socks proxy, 
-- .pac file自动代理, https://chls.pro/10.23.182.219.pac
-- 手机app socks 抓包, 抓取 Wifi Http 代理抓不到的数据，e.g: 视频数据，有些app的支付请求数据
+  - Rewrite, Map Local, DNS Spoofing, Auto Save
+- https/socks proxy, .pac file自动代理, https://chls.pro/10.23.182.219.pac
+- 手机app 抓包, 抓取 Wifi Http 代理抓不到的数据，e.g: 视频数据，有些app的支付请求数据
   - 配合手机app: `Potatso Lite`, `Brook`
 
 
@@ -150,6 +158,14 @@ class: 'gradient-h1'
 # Charles 头条视频抓包
 
 <img src="assets/dev/charles-toutiao.png" style="height: 430px; margin: 0 auto;"/>  
+
+---
+class: 'gradient-h1'
+---
+
+# Charles 抖音视频抓包
+
+<img src="assets/dev/charles-douyin.png" style="height: 430px; margin: 0 auto;"/>  
 
 ---
 class: 'gradient-h1'

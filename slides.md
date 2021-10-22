@@ -171,6 +171,14 @@ class: 'gradient-h1'
 class: 'gradient-h1'
 ---
 
+# 抖音直播也是flv
+
+<img src="assets/dev/douyin-flv.png" style="height: 430px; margin: 0 auto;"/>  
+
+---
+class: 'gradient-h1'
+---
+
 # Charles 替代品
 
 [Proxyman](https://proxyman.io/), Mac原生app, 下面抓取视频Proxyman的截图

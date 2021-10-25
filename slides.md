@@ -4,7 +4,7 @@ theme: seriph
 download: false
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
+# background: https://source.unsplash.com/collection/94734566/1920x1080
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
@@ -19,7 +19,7 @@ info: |
 
 # Develop Productivity
 
-### 开发生产力闲扯
+## 开发生产力<small style="margin-left: 5px;font-size: 0.6em;">闲扯</small>
 
 ---
 class: 'gradient-h1'
@@ -47,10 +47,10 @@ class: 'gradient-h1'
 
 [https://www.alfredapp.com](https://www.alfredapp.com/)
 
-- 一些常规操作
+- 一些常规操作，app切换，`sleep`,`lock`，etc...
 - Powerpack
   - 剪贴板历史, Snippets
-  - Workflow
+  - Workflow  
     - 系统主题等快速切换, `dark/light mode`, `night shift`, `免打扰模式`等
     - 快速搜索 npm 库, `npm`
     - 快速切到指定 浏览器tab, `tb`
@@ -78,12 +78,12 @@ class: 'gradient-h1'
 - File structure(`CMD + F12`), 比 `CMD + F`更快的查看文件变量，方法，html tab等
 - Multiple cursors, Column Selection Mode，多光标输入、多列选择模式
 - Local History, 本地历史
-- Scratch file (`CMD + SHIFT + N`)，创建临时文件
+- Scratch file (`CMD + SHIFT + N`)，创建临时文件，查看JSON...
 - Quokkajs plugin, 快速编写代码，实时看效果
 - 其他一些好用的快捷键
   - 当前文件快速定位到文件目录里的对应位置(包括node_modules里的文件)(`CTRL + CMD + <-`)
   - Search Everywhere, `SHIFT + SHIFT`, 搜索配置/操作(`CMD + SHIFT + P/A`), etc...
-  - Surround Width(`CMD + ALT + T`), 快速2遍加tag, 方法调用等
+  - Surround Width(`CMD + ALT + T`), 快速2遍加html tag、 方法调用等
   - postfix, `var1.logname` -> `console.log('var1: ', var1)`
   - live template, e.g: 
     - `tc` -> try/catch block; 
@@ -204,8 +204,8 @@ class: 'gradient-h1'
 
 # Bonus Apps
 
-- Bartendar
-- Hazeover
+- Bartendar (https://www.macbartender.com/)
+- HazeOver (https://hazeover.com/)
 - https://github.com/jaywcjlove/awesome-mac
 
 ---

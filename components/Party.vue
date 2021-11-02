@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { defineProps, ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import party from 'party-js'
 
 const props = defineProps({
   count: {
     default: 0,
   },
+  nav: {}
 })
 
 const counter = ref(props.count)
@@ -23,6 +24,7 @@ onMounted(() => {
   showPartyEffect()
   btn = document.getElementById('party-btn')
   btn && btn.addEventListener('click',  showPartyEffect)
+  // console.log(props.nav)
 })
 onBeforeUnmount(() => {
   btn && btn.removeEventListener('click',  showPartyEffect)

@@ -6,11 +6,11 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.11.2",
-    "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*",
-    "party-js": "^2.0.1",
-    "playwright-chromium": "^1.11.1"
+    "@slidev/cli": "^0.27.1",
+    "@slidev/theme-default": "^0.21.0",
+    "@slidev/theme-seriph": "^0.21.0",
+    "party-js": "^2.1.0",
+    "playwright-chromium": "^1.15.1"
   },
   "name": "video-slides"
 }
